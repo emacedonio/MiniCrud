@@ -27,6 +27,7 @@ public class ControllerCrud {
     public String post(@RequestBody Persona persona) {
        repo.save(persona);
        return "Guardado";
+
     }
     @PutMapping("editar/{id}")
     public String update(@PathVariable Long id, @RequestBody Persona persona) {
