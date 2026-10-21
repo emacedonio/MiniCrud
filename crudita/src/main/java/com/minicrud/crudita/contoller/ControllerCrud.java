@@ -2,16 +2,17 @@ package com.minicrud.crudita.contoller;
 
 import com.minicrud.crudita.model.Persona;
 import com.minicrud.crudita.repository.Repository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 public class ControllerCrud {
 
-    @Autowired
-    private Repository repo;
+    private final Repository repo;
 
     @GetMapping()
     public String index() {
